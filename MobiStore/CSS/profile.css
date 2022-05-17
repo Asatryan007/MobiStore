@@ -1,0 +1,456 @@
+/* Import files  */
+@import 'style.css';
+
+main{
+	padding: 100px 0;
+	min-height: 100vh;
+}
+
+section.container{
+	margin-top: 50px;
+	padding-bottom: 50px;
+}
+section{
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+
+h2{
+	padding-top: 2%;
+	position: relative;
+	margin: 0 0 2% 1%;
+}
+h3{
+	position: relative;
+}
+h2:after,h3:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+
+/*user styles start*/
+
+.about_user{
+	display: flex;
+	flex-flow: row nowrap;
+	flex: 1;
+	margin: 1%;
+	padding: 4% 0;
+}
+
+.avatar{
+	border: 1px solid black;
+	border-radius: 7px;
+	padding: 5%;
+}
+
+.about_user .avatar img{
+	width: 200px;
+}
+.personal_info{
+	margin: 10% 0 0 5%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	height: 150px;
+}
+.personal_info_changer{
+	margin: 0 0 0 5%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+.personal_info .span{
+	font-size: 16px;
+	font-weight: 700;
+}
+.form-group{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.form-group label{
+	font-weight: bold;
+	margin-right: 10px;
+}
+.config{
+	outline: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+}
+.personal_info_changer form button[type ='submit'],.personal_info_changer form button[type ='reset']{
+	position: relative;
+	margin: 20px auto;
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	transition: 0.6s;
+  }
+
+ .personal_info_changer form button[type ='submit']:hover,.personal_info_changer form button[type ='reset']:hover{
+	  background: black;
+	  color: white;
+	  cursor: pointer;
+  }
+
+
+.btn,.configuration{
+	background: none;
+	color: black;
+	border: 2px solid black;
+	margin-top: 10px;
+	padding: 10px 10px;
+	text-align: center;
+	font-size: 14px;
+	width: 100%;
+	transition: 0.6s;
+}
+.btn i{
+	margin-right: 10px;
+}
+.btn:hover,.configuration:hover{
+	background-color: #000;
+	cursor: pointer;
+	color: white;
+}
+.pass_change{
+	margin-top: 10px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.pass_change p{
+	font-size: 14px;
+	max-width: 500px;
+}
+.mod_btn{
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	position: relative;
+	transition: 0.6s;
+}
+.pass_form{
+	padding: 0 40px;
+	margin-top: 20px;
+	display: flex;
+	flex-flow: column;
+}
+.pass_form input{
+	width: 90%;
+}
+.msg{   /*Message box styles in delivery page*/
+	width: 100%;
+	font-size: 14px;
+	color: red;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+/*user styles end*/
+/* The Modal (background) */
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+	transition: all 0.8s  ease 0s;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 40px;
+	border: 1px solid #888;
+	max-width: 500px;
+  }
+  .modal-content h3{
+	  width: 215px;
+  }
+  .modal-content p{
+	  margin-top: 10px;
+	  padding: 0 15px;
+	  text-align: left;
+	  width: 80%;
+  }
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  .modal-content form{
+	display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+  }
+  .modal-content form button[type ='submit']{
+	position: relative;
+	margin: 20px auto;
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	transition: 0.6s;
+  }
+  .modal-content form button[type ='submit']:hover{
+	  background: black;
+	  color: white;
+	  cursor: pointer;
+  }
+/*basket styles start*/
+.basket{
+	margin-top: 20px;
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1;
+}
+.basket_contents{
+	height: 350px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.empty_box{
+	display: block;
+    width: 100%;
+    text-align: center;
+}
+.empty{
+	position: relative;
+    top: 100px;
+    color: gray;
+    font-size: 50px;
+}
+.product{
+	display: flex;
+	flex-flow: row wrap;
+	margin: 2% 0 0 1%;
+	width: 100%;
+}
+.product_img{
+	border: 1px solid black;
+	border-radius: 7px;
+}
+.product_img img{
+	width: 200px;
+	height: 200px;
+	padding: 10%;
+}
+.product_name{
+	margin: 13% 0 0 2%;
+    font-size: 25px;
+    font-weight: 700;
+	width: 310px;
+}
+.btn-group{
+	position: relative;
+    display: flex;
+    flex-flow: column wrap;
+	justify-content: space-evenly;
+}
+.basket_btn i{
+	margin-right: 10px;
+}
+.basket_btn{
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100%;
+	position: relative;
+	transition: 0.6s;}
+.basket_btn:hover,.mod_btn:hover{
+	background-color: black;
+	cursor: pointer;
+	color: white;
+}
+/*basket styles end*/
+
+
+/*order styles start*/
+
+.order{
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 2;
+	padding-bottom: 4%;
+	
+}
+.order_contents{
+	height: 450px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.ordered_product{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 10px 0;
+	width: 100%;
+}
+.ordered_product_name{
+	margin: 4% 0 0 1%;
+
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.orders_date{
+	margin: 20% 0 0 20%;
+	width: 100%;
+}
+.about_order{
+	width: 300px;
+}
+.about_order div{
+	margin: 5% 0 0 20%;
+	width: 100%;
+}
+.about_order div span i {
+	margin-left: 10px;
+}
+
+.order_status-positive i{
+	color: green;
+}
+.order_status-negative i{
+	color: red;
+}
+/*order styles end*/
+
+/*Media Queries styles start*/
+
+@media only screen and (max-width: 1755px){
+	section{
+		flex-direction: column;
+	}
+	.product{
+		justify-content: space-evenly;
+	}
+
+	.about_user{
+		flex-flow: row wrap;
+	}
+
+	.about_user .avatar img{
+		width: 150px;
+	}
+	.product_name{
+		margin: 8% 0 0 2%;
+	}
+
+}
+@media only screen and (max-width: 1064px){
+	.ordered_product{
+		width: 300px;
+	}
+}
+@media only screen and (max-width: 828px){
+    
+    .header__link{
+        font-size: 15.5px;
+    }
+}
+@media only screen and (max-width: 866px){
+    .basket_contents{
+		display: flex;
+		height: 500px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	.product{
+		margin: 10px 20px;
+	}
+	.product_name{
+		width: 200px;
+		text-align: center;
+	}
+	.basket_btn{
+		margin-top: 10px;
+	}
+	.order_contents {
+		display: flex;
+		flex-flow: column wrap;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		height: 500px;
+	}
+	.ordered_product{
+		width: 300px;
+	}
+	
+	.ordered_product_name {
+		width: 250px;
+		height: 50px;
+		margin-top: 4%;
+		font-size: 18px;
+		text-align: left;
+	}
+	.about_order {
+		position: relative;
+		width: 300px;
+		text-align: left;
+		margin: 0 auto;
+	}
+	.orders_date{
+		margin: 0;
+	}
+	.about_order div {
+		margin: 0;
+		margin-top: 2%;
+		width: 100%;
+	}
+    
+}
+@media only screen and (max-width: 793px){
+    .basket{
+		margin-top: 40px;
+	}
+	.mod_btn{
+		 margin-top: 20px; 
+	}
+}
+@media only screen and (max-width: 600px){
+	.container{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 480px){
+	.container{
+		padding: 0 10px;
+	}
+	.product, .ordered_product{
+		margin: 4% 0 0 1%;
+	}
+	
+}
+
+/*Media Queries styles end*/

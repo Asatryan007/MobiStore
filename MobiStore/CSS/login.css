@@ -1,0 +1,336 @@
+/* Import files  */
+@import 'style.css';
+
+h2{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+}
+h2:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -3.5px;
+	transition: 0.4s;
+}
+h2:hover:after{
+	width: 100%;
+}
+a{
+	color: black;
+}
+
+main{
+	height: 100vh;
+	background-image: url('../IMG/backgrounds/background.jpg');
+	background-size: cover;
+	background-attachment:fixed ;
+	background-repeat: no-repeat;
+	user-select: none;
+	}
+
+form{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	padding: 20px;
+}
+label{
+	font-size: 16px;
+	border: 1px solid  #e91e63;
+	border-radius: 15px ;
+	padding: 10px;
+
+}
+input[type="radio"]{
+	margin-right: 10px;
+}
+input[type = "radio"]:after{
+	content: " ";
+	position: relative;
+	top: -3px;
+	left: -2px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 3px solid #545E8B;
+	background-color: #d1d3d1;
+	padding: 2px;
+	border-radius: 15px;
+}
+input[type = "radio"]:checked:after{
+	background-color: #e91e63;
+}
+#active{
+	border-bottom: 3px solid #e91e63;
+}
+.register-box, .login-box{
+	width: 320px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0 10px;
+	transform: translate(-50%,-50%);
+	color: black;
+}
+.register-box{
+	margin-top: 3%;
+	height: 700px;
+}
+.titles_cont{
+	display: flex;
+	justify-content: space-between;
+}
+.login-box div a h2, .register-box div a h2{
+	position: relative;
+	font-size: 30px;
+	padding: 10px 0;
+}
+.login-box>a>h2:after, .register-box>a>h2:after {
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -5px;
+	transition: 0.4s;
+}
+.login-box>a>h2:hover:after, .register-box>a>h2:hover:after{
+	width: 100%;
+} 
+
+.input_box{
+	margin: 10px;
+}
+input[type="text"],input[ type = "password"],input[type = "email"]{
+	width: 90%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 5px 0;
+	color: black;
+	border-bottom: 2px solid #e91e63;
+	text-indent: 20px;
+	font-size: 18px;
+	
+}
+
+.text-box a{
+	position: relative;
+	float: right;
+	font-weight: bold;
+}
+.text-box a:after {
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 2px;
+	width: 0;
+	left: 0;
+	bottom: -5px;
+	transition: 0.4s;
+}
+.text-box a:hover:after{
+	width: 100%;
+}
+.btn{
+	width: 100%;
+	outline: none;
+	border: 2px solid #e91e63;
+	color: black;
+	padding: 5px;
+	margin-top: 10px;
+	font-size: 18px;
+	cursor: pointer;
+	background: white;
+	transition: 0.7s;
+}
+
+input.error{
+	box-shadow: 0 0 15px red;
+}
+
+form span{
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.btn:hover{
+	border: 2px solid black;
+	filter: invert(2);
+	transform: scale(1.05);
+}
+.msg{
+	width: 100%;
+	border: 1px solid #e91e63;
+	border-radius: 3px;
+	margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+/*Popup Styles start*/
+
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s  ease 0s;
+
+
+}
+
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+
+}
+.popup:target .popup__content{
+    transform: perspective(600px) translate(0px,0%) rotateX(0deg);
+    opacity: 1;
+}
+.popup__area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: auto;
+}
+.popup__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: all 0.8s ease 0s;
+     }
+.popup__content{
+    background-color: #fff;
+    color: #000;
+    max-width: 400px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px,-100%) rotateX(45deg);
+}
+.popup>.popup__body>.popup__content>.popup__close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+.popup__title{
+	text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.about_reset{
+	font-size: 14px;
+	text-align: center;
+	color: red;
+}
+.popup_text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.forgot{
+	text-align: center;
+}
+.popup  input[type="email"]{
+	display: block;
+	margin: 10px 0;
+	width: 100%;
+	padding: 10px 10px;
+	text-align: center;
+	background: none;
+	border: 2px solid black;
+	transition: 0.6s;
+}
+.popup  input[type="email"]:focus{
+	border-left: 40px solid black;
+}
+
+.popup input[type="submit"]{
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	margin: 10px auto;
+	transition: 0.6s;
+}
+.popup input[type="submit"]:hover{
+	background-color: black;
+	cursor: pointer;
+	color: white;
+
+}
+.popup .input_email{
+	text-align: center;
+	font-size: 14px;
+	color: red;
+}
+.msg_forgot{
+	text-align: center;
+	font-size: 14px;
+	color: red;
+}
+/*Popup Styles End*/
+
+
+/*Media queries styles start*/
+
+@media only screen and (max-width: 480px){
+	
+	/*sign up/ sign in boxes styles start*/
+
+	.register-box{
+		margin-top: 14%;	
+	}
+	.login-box div a h2, .register-box div a h2{
+		font-size: 25px; /*titles style*/
+	}
+	.login-box, .register-box {
+		width: 280px; /*login & register box width*/
+	}
+	.login-box form, .register-box form{
+		width: 260px; /*above form width*/
+	}
+
+	label{
+		font-size: 15px; /*radio button font size in form register*/
+		padding: 6px; /*radio button padding in form register*/
+	}
+
+	/*sign up/ sign in boxes styles end*/
+
+	/*popup styles start*/
+
+	.popup__content{
+		padding: 10px;
+	}
+
+	/*popup styles end*/
+
+}
+
+
+/*Media Queries styles end*/

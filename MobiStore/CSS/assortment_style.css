@@ -1,0 +1,344 @@
+/* Import files  */
+@import 'style.css';
+
+
+/*Main styles start*/
+main{
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+        margin-top: 40px;
+
+}
+section{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 2px 20px rgba(11, 45, 26, 0.15993);
+}
+.btn{
+    background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+    height: 40px;
+	width: 100px;
+	position: relative;
+	transition: 0.6s;
+}
+.btn:hover{
+    background-color: black;
+	cursor: pointer;
+	color: white;
+}
+figure a:visited{
+    color: black;
+}
+
+#navigation{
+    margin-top: 9%;
+    flex: 2;
+    padding-left: 10px;
+    user-select: none;
+    padding-bottom: 40px;
+}
+#navigation{
+    order: -1;
+}
+.content{
+    display: flex;
+    flex: 2 2 100vh;
+    margin-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*Main styles end*/
+
+/*Nav MENU styles start*/
+h3{
+    position: relative;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h3:after{
+    content: "";
+    position: absolute;
+    background-color: #e91e63;
+    height: 3px;
+    width: 50px;
+    left: 0;
+    bottom: -5px;
+}
+
+
+.assortment_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.assortment_list>li{
+    padding: 15px 10px;   
+    width: 200px;
+    height: 100%;
+    margin-bottom: 5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 0.2px;
+
+    color: rgba(0, 0, 0, 0.4);
+    background-color: white;
+
+    transition: 0.5s;
+    }
+.assortment_list-item:hover{
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+.active_item{
+    filter: invert(1);
+    border-radius: 10px;
+}
+.assortment_list-item span{
+    position: relative;
+    top: -20px;
+}
+.assortment_list>li>img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10%;
+}
+
+.assortment_list>li:hover{
+    color: rgba(0, 0, 0, 1.0);
+    cursor: pointer;
+}
+.phone_comprison>a{
+    position: relative;
+    color: #24262b;
+}
+.phone_comprison>a:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -3.5px;
+	transition: 0.4s;
+}
+.phone_comprison>a:hover:after{
+    width: 100%;
+}
+/*Range for price styles start*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.filters-price_inputs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.filters-price_label{
+    display: flex;
+    align-items: center;
+    width: 133px;
+    height: 40px;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding: 0 10px;
+
+}
+.filters-price_text{
+    font-size: 14px;
+    color: #808080;
+}
+.filters-price_input{
+    border: none;
+    outline: none;
+    color: #4D4D4D;
+    padding: 0 10px;
+}
+.arrow{
+    background-color: black;
+    height: 1px;
+    width: 10px;
+    margin: auto 10px;
+}
+
+/*Range for price styles start*/
+
+/*Nav MENU styles end*/
+
+/* Content Styles Start */
+
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+figure{
+    height: 480px;
+    width: 202px;
+    user-select: none;
+    padding: 11px 1px;
+  }
+
+figure:hover{
+    box-shadow: 0px 2px 20px rgba(11, 45, 26, 0.15993);
+}
+
+
+.image{
+    padding-top: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 16px;
+    height: 25px;
+}
+.price_list-cont{
+    display: block;
+    margin-top: 10%;
+    height: 125px;
+}
+
+.credit_price{
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chash_price{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: red;
+    letter-spacing: 1px;
+}
+.credit-month{
+    margin-top: 5px;
+    text-align: center;
+
+}
+.credit span{
+    color: blue;
+}
+
+.btn_group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn-1{
+    background: none;
+	border: 1px solid black;
+	padding: 10px 5px;
+    height: 40px;
+	width: 100px;
+	position: relative;
+	transition: 0.6s;
+}
+.btn-2{
+    background: white;
+	border: 1px solid black;
+	padding: 10px 5px;
+    color: black;
+    height: 40px;
+	width: 100px;
+	position: relative;
+	transition: 0.6s;
+}
+.active_btn,.btn-1:hover, .btn-2:hover{
+    background-color: black;
+	cursor: pointer;
+	color: white;
+}
+/* Content Styles End */
+
+/*Filter styles start*/
+.hide{
+    /*animation-name: animation_hide;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;*/
+    display: none;
+}
+
+/*Filter styles end*/
+
+
+/*Nav Menu styles end*/
+
+/*Media`s styles  start*/
+@media screen and (max-width: 1357px){
+                main{
+                    min-height: 100vh;
+                }
+                section {
+                    flex-direction: column;
+                    min-height: 100%;
+                    flex: 1 1 auto;
+                }
+                .assortment_list>li {
+                    padding: 15px 25px;
+                    width: 246px;
+                    font-size: 15px;
+                }
+                .filters-price_inputs{
+                    justify-content: normal;
+                }
+}               
+@media screen and (max-width: 767px) {
+                 
+                main{
+                    min-height: 100vh;
+                }
+                section {
+                    flex-direction: column;
+                    min-height: 100%;
+                    flex: 1 1 auto;
+                }
+                .content {
+                    flex-flow: row nowrap; 
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    padding: 0;
+                }
+}
+@media screen and (max-width: 515px) {
+                .container{
+                    width: 100%;
+                }
+                .filters-price_inputs{
+                    flex-flow: column wrap;
+                }
+                .filters-price_label:first-child{
+                    margin-right: 20px
+                }
+                #last_lab,.btn{
+                    margin-top: 20px;
+                }
+               
+                .arrow{
+                    display: none;
+                }
+}

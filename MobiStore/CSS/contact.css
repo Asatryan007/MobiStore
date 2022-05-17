@@ -1,0 +1,188 @@
+/* Import files  */
+@import 'style.css';
+
+
+main{
+	margin: 8% 0;
+}
+section{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.1em;
+	justify-content: space-between;
+    line-height: 1.8;
+    box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+
+h3{
+	position: relative;
+}
+h3:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+ul>li>a>img{
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+
+/*contacts styles start*/
+
+.contacts>p{
+	font-size: 20px;
+	margin-top: 25px;
+}
+ul{
+	list-style: none;
+	margin: 20px 0;
+}
+.contacts, .feedback{
+	position: relative;
+	padding: 40px;
+	width: 50%;
+}
+.social_media{
+	display: flex;
+}
+.social_media li{
+	margin-right: 20px;
+}
+.social_media li>a{
+	display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.social_media li>a:hover{
+	filter: invert(1);
+}
+
+/*contacts styles end*/
+
+/*feedback styles start*/
+.input-box{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+
+input[type="text"],input[type="email"]{
+	border: 2px solid black;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	transition: 0.6s;
+}
+input[type="text"]:focus,input[type="email"]:focus{
+	border-left: 40px solid black;
+}
+
+textarea{
+	position: relative;
+	resize: none;
+	width: 100%;
+	font-family: sans-serif;
+	font-size: 18px;
+	border: 2px solid black;
+	text-indent: 20px;
+	line-height: 1.2;
+	padding: 10px 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+input[type="submit"]{
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	position: relative;
+	transition: 0.6s;
+
+	float: right;
+}
+
+input[type="submit"]:hover{
+	background-color: black;
+	cursor: pointer;
+	color: white;
+}
+input.error{
+	box-shadow: 0 0 15px red;
+}
+.msg{   /*Message box styles in delivery page*/
+	width: 340px;
+	font-size: 14px;
+	color: red;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+/*feedback styles end*/
+/*map styles start*/
+.map{
+	margin: 40px;
+	width: 100%;
+}
+.map>iframe{
+	width: 100%;
+	padding: 20px;
+}
+/*map styles end*/
+
+/*Media querys styles start*/
+
+@media only screen and (max-width: 1200px){
+	.feedback, .contacts{
+		padding: 10px;
+		width: 100%;
+	}
+	.map{
+		margin: 10px;
+	}
+	.input-box{
+		flex-flow: row wrap;
+	}
+}
+@media only screen and (max-width: 768px){
+	.contacts{
+		margin-top: 5%;
+	}
+	.input-box{
+		flex-flow: column;
+	}
+}
+@media only screen and (max-width: 600px){
+	.contacts{
+		margin-top: 10%;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	
+	.contacts{
+		margin-top: 20%;
+	}
+	
+	textarea{
+		text-indent:5px ;
+		padding: 5px 10px;
+	}
+	.msg{
+		width: 200px;
+	}
+}
+
+/*Media querys styles end*/

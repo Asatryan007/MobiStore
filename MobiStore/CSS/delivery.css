@@ -1,0 +1,192 @@
+/* Import files  */
+@import 'style.css';
+
+main{
+	padding-top: 100px;
+	min-height: 100vh;
+}
+section{
+	box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+h2{
+	position: relative;
+	margin-bottom: 20px;
+}
+h2:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+.product{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 20px;
+}
+.item{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.item img{
+	width: 200px;
+	height: 200px;
+}
+.product h3{
+	margin-top: 4%;
+}
+#plus,#minus{
+	display: block;
+	position: relative;
+	width: 36px;
+	height: 36px;
+	padding: 8px;
+	border: 1px solid #ccc ;
+	cursor: pointer;
+}
+.input-group{
+	position: relative;
+	display: table;
+	margin-top: 40%;
+}
+.group-w{
+	width: 132px;
+}
+.group-w form{
+	padding: 0;
+}
+.group-w form #form-control{
+	display: table-cell;
+	background: #fff;
+	position: absolute;
+	float: left;
+	height: 30px;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0-30px;
+	width: 60px;
+	border: 0;
+	text-align: center;
+	font-size: 18px;
+}
+.input-group-btn{
+	position: relative;
+	white-space: nowrap;
+	width: 142px;
+	vertical-align: middle;
+	display: table-cell;
+}
+#plus{
+	float: right;
+}
+#minus{
+	float: left;
+}
+.item_price{
+	width: 120px;
+}
+.price{
+	margin-top: 50%;
+}
+
+.item_price .price span{
+	font-size: 120%;
+	font-weight: 700;
+}
+
+.btn{
+	position: relative;
+	margin: 2% 0;
+
+	background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100px;
+	transition: 0.6s;
+}
+.btn:hover{
+	background-color: black;
+	cursor: pointer;
+	color: white;
+}
+
+
+/* personal info styles start */
+
+.personal_info{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+form{
+	padding: 40px;
+}
+label{
+	margin: 1% 0;
+	font-size: 18px;
+	color: gray;
+	user-select: none;
+}
+.personal_info input.error{
+	box-shadow: 0 0 15px red;
+}
+input,textarea{
+	height: auto;
+	padding: 12px;
+}
+.radio_box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 250px;
+}
+
+input[type="radio"]{
+	margin-right: 10px;
+}
+input[type = "radio"]:after{
+	content: " ";
+	position: relative;
+	top: -3px;
+	left: -2px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 3px solid #545E8B;
+	background-color: #d1d3d1;
+	padding: 2px;
+	border-radius: 15px;
+}
+input[type = "radio"]:checked:after{
+	background-color: #e91e63;
+}
+.radio_label{
+	color: black;
+}
+
+input{
+	border-bottom:1px solid #e91e63 ;
+	outline: 0;
+}
+textarea{
+	border: 1px solid #ccc;
+	resize: none;
+	outline: 0;
+}
+
+.msg{   /*Message box styles in delivery page*/
+	width: 100%;
+	font-size: 14px;
+	color: red;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+   /*personal info styles end*/

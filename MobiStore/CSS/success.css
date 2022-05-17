@@ -1,0 +1,48 @@
+/* Import files  */
+@import 'style.css';
+
+section{
+    padding: 20% 0;
+    min-height: 100vh;
+    display: flex;
+   align-items: center;
+    box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+
+.msg_box{
+    position: relative;
+    max-width: 600px;
+   margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    padding: 40px;
+}
+.msg_box i{
+    color: green;
+    font-size: 40px;
+}
+
+.msg_box .hint{
+    font-size: 15px;
+}
+
+.msg_box .hint a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.btn{
+    margin-top: 20px;
+    background: none;
+	border: 2px solid black;
+	padding: 10px 10px;
+	width: 100%;
+	position: relative;
+	transition: 0.6s;
+}
+.btn:hover{
+    background-color: black;
+	cursor: pointer;
+	color: white;
+}

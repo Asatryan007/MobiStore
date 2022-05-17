@@ -1,0 +1,105 @@
+/* Import files  */
+@import 'style.css';
+
+main{
+	margin: 5% auto;
+}
+section{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.1em;
+	padding: 1em;
+	justify-content: space-between;
+    line-height: 1.8;
+    box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+
+h3{
+	position: relative;
+	margin: 20px 10px;
+}
+h3:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+.vacancy_conditions{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 16px;
+	color: black;
+	text-align: left;
+	margin-bottom: 40px;
+	padding:20px 15px;
+}
+
+
+.vacancy_news, .vacancy_info{
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+
+.title_for_cv{
+	position: relative;
+	margin: 20px 10px;
+}
+.title_for_cv:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+
+
+/*Media Queries styles start*/
+
+@media only screen and (max-width: 1200px){
+	.vacancy_info{
+		margin-top: 5%;
+	}
+	.vacancy_news{
+		margin-bottom: 5%;
+	}
+	.vacancy_news,.vacancy_info{
+		width: 100%;
+	}
+
+	.input-box{
+		flex-flow: row wrap;
+	}
+
+}
+@media only screen and (max-width: 768px){
+	.vacancy_info{
+		margin-top: 10%;
+	}
+	.vacancy_news{
+		margin-bottom: 10%;
+	}
+	.input-box{
+		flex-flow: column;
+	}
+}
+
+
+@media only screen and (max-width: 480px){
+	
+	.vacancy_info{
+		margin-top: 15%;
+	}
+	.vacancy_news{
+		margin-bottom: 15%;
+	}
+}
+
+
+/*Media Queries styles end*/

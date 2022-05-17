@@ -1,0 +1,162 @@
+/* Import files  */
+@import 'style.css';
+@import 'assortment_style.css';
+
+body{
+	margin-top: 5%;
+}
+section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-height: 100vh;
+	box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+footer{
+	margin-top: 5%;
+}
+table {
+	margin-top: 40px;
+	user-select: none;
+	cursor: pointer;
+}
+table tr{
+	height: 30px;
+}
+table tr td {
+	font-size: 17px;
+	background-color: rgba(84,94,139, 0.2);
+	padding: 10px;
+	width: 50%;
+}
+
+table tr td:last-child {
+	text-align: right;
+}
+#plus,#minus{
+	display: block;
+	position: relative;
+	width: 36px;
+	height: 36px;
+	padding: 8px;
+	border: 1px solid #ccc ;
+	cursor: pointer;
+}
+.image_cont{
+	position: relative;
+	margin: 0 auto;
+	width: 60%
+}
+.info_cont{
+	padding-left: 20px;
+	position: relative;
+	box-shadow: 2px 0px 20px rgba(21, 45, 36, 0.15993);
+	margin: 0 auto;
+	width: 38%;
+}
+.image_cont{
+	text-align: center;
+}
+
+.choosen_img{
+	margin-top: 40px;
+	padding: 10px;
+	width: 400px;
+	border-bottom: 2px solid #545E8B;
+}
+.image_cont h2{
+	margin-top: 20px;
+	text-align: center;
+	user-select: none;
+}
+.suggested{
+	display: flex;
+	flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.suggested_title{
+	position: relative;
+	text-align: left;
+}
+/*Info cont styles start*/
+.info_cont h2{
+	font-size: 28px;
+	position: relative;
+	margin-top: 40px;
+}
+.info_cont h2:after,.suggested_title:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+	transition: 0.4s;
+}
+.info_cont h2 img {
+	width: 35px;
+}
+.btn-buy{
+	position: relative;
+	background: white;
+	border: 2px solid black;
+	padding: 10px;
+	width: 100px;
+	margin: 20px 0;
+	transition: 0.6s;
+	user-select: none;
+}
+.btn-buy i{
+	width: 20px;
+	margin-right: 10px;
+}
+.btn-buy span{
+	position: relative;
+	bottom: 3px;
+}
+.btn-buy:hover{
+	cursor: pointer;
+	filter: invert(1);
+}
+
+/*Info cont styles end*/
+
+
+
+/*Media Queries styles start*/
+
+@media only screen and (max-width: 1835px){
+	.info_cont,.image_cont{
+		width: 100%;
+	}
+	.image_cont{
+		text-align: center;
+	}
+	.image_cont img{
+		width: 65%;
+	}
+	.info_cont{
+		box-shadow: none;
+	}
+	.rating-stars{
+		padding: 10px;
+	}
+	.star-icon{
+		padding: 0;
+	}
+
+}
+@media only screen and (max-width: 767px){
+	.image_cont{
+		margin-top: 10%;
+	}
+}
+@media only screen and (max-width: 579px){
+	.suggested{
+		flex-flow: row nowrap;
+		overflow-x: scroll;
+	}
+}
+/*Media Queries styles end*/

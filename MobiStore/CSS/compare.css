@@ -1,0 +1,155 @@
+/* Import files  */
+@import 'style.css';
+
+/*Main styles start*/
+main{
+	padding: 150px 0;
+	min-height: 100vh;
+}
+#to_top{
+	visibility: hidden;
+}
+
+section{
+	padding: 25px;
+	box-shadow: 0px 2px 20px rgba(21, 45, 36, 0.15993);
+}
+h2{
+	position: relative;
+	font-size: 35px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+h2:after{
+	content: "";
+	position: absolute;
+	background-color: #e91e63;
+	height: 3px;
+	width: 50px;
+	left: 0;
+	bottom: -5px;
+}
+/*Main styles end*/
+/* before compare styles start*/
+
+.select_box
+{	
+	font-size: 22px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	position: relative;
+	padding-bottom: 100px;
+}
+.select_box form{
+	display: flex;
+	flex-flow: row wrap;
+}
+.select_box form span{
+	margin: 20px;
+}
+.select_box select{
+	background-color: #24262b;
+	color: white;
+	padding: 8px;
+	width: 300px;
+	border: none;
+	margin: 0 10px;
+	font-size: 18px;
+	text-align: center;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+	-webkit-appearance: button;
+	appearance: button;
+	outline: none;
+}
+.select_box select optgroup option{
+	text-align: left;
+}
+select::-webkit-scrollbar {
+	display: none;
+  }
+  .msg{   /*Message box styles in compare page*/
+	width: 100%;
+	font-size: 14px;
+	color: red;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.btn{
+	background: none;
+	border: 1px solid black;
+	padding: 10px 5px;
+    height: 40px;
+	width: 100%;
+	position: relative;
+	transition: 0.6s;
+}
+.btn:hover{
+	background: black;
+	cursor: pointer;
+	color: white;
+}
+/* before compare styles end */
+
+/*content styles start*/
+.compare_tables{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-bottom: 50px;
+}
+
+
+table {
+	position: relative;
+	width: 50%;
+	margin-top: 40px;
+	user-select: none;
+	cursor: pointer;
+}
+table tr,th{
+	height: 30px;
+}
+tr td form{
+	text-align: center;
+}
+tr td a  img{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+th{
+	text-align: left;
+}
+td{
+	text-align: right;
+}
+table tr th,td {
+	background-color: rgba(84,94,139, 0.2);
+	padding: 5px;
+}
+/*content styles end*/
+
+/*Media Queries styles start*/
+@media only screen and (max-width: 1578px){
+	.select_box form{
+		display: flex;
+		width: 300px;
+		flex-flow: column nowrap;
+	}
+	.select_box form span{
+		text-align: center;
+	}
+	.select_box form span select{
+		width: 200px;
+	}
+}
+@media only screen and (max-width: 822px){
+	table{
+		width: 100%;
+	}
+}
+
+/*Media Queries styles end*/
